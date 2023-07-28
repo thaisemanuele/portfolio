@@ -44,7 +44,9 @@ a:hover {
 }
 /* intro styles */
 #intro {
-  padding-bottom: 10rem;
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #intro p {
@@ -78,8 +80,14 @@ a:hover {
   padding: 3rem 0;
 }
 
-#contact p:last-child {
-  margin-top: 3rem;
+.contact-bg {
+  background-color: var(--avocado);
+}
+
+.gradient-separator {
+  background: linear-gradient(90deg, var(--rose) 0%, var(--hotrose) 100%);
+
+  height: 2px;
 }
 
 /* navigation */
@@ -139,6 +147,7 @@ nav [class*="fa-"]:hover {
 /* footer section */
 footer {
   text-align: center;
+  padding: 4rem 0;
 }
 footer ul {
   list-style-type: none;
