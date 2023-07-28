@@ -8,7 +8,7 @@
   --aqua: #7fdcca;
   --white: #f7f8fa;
   --font-size: 1.3rem;
-  --mono: "Oxygen mono", monospace;
+  --mono: "Fira code", monospace;
   --sans: Oxygen, sans-serif;
 }
 /* border box model: https://css-tricks.com/box-sizing/ */
@@ -126,7 +126,7 @@ nav [class*="fa-"]:hover {
   color: var(--aqua);
 }
 .button {
-  background-color: var(--magenta);
+  background-color: var(--avocado);
   color: white;
   padding: 0.5rem;
   border-radius: 5px;
@@ -134,7 +134,7 @@ nav [class*="fa-"]:hover {
 
 .button:hover {
   color: white;
-  background-color: var(--hotmag);
+  background-color: var(--rose);
 }
 /* footer section */
 footer {
