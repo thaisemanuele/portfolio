@@ -2,7 +2,7 @@
 :root {
   --black: #011627;
   --dkblue: #82aaff;
-  --avocado: #81A649;
+  --avocado: #81a649;
   --hotrose: #c892e9;
   --rose: #f78c6c;
   --aqua: #7fdcca;
@@ -35,11 +35,11 @@ h3 {
   margin: 0;
 }
 a {
-  color: var(--magenta);
+  color: var(--rose);
 }
 
 a:hover {
-  color: var(--hotmag);
+  color: var(--aqua);
   text-decoration: none;
 }
 /* intro styles */
@@ -60,7 +60,7 @@ a:hover {
 .name span {
   font-family: var(--sans);
   font-size: 4rem;
-  color: var(--aqua);
+  color: var(--hotrose);
   display: block;
   font-weight: 300;
 }
@@ -109,7 +109,7 @@ nav li:first-child {
 }
 nav [class*="fa-"] {
   font-size: 150%;
-  color: var(--aqua);
+  color: var(--rose);
 }
 nav h1 [class*="fa-"] {
   font-size: 100%;
@@ -123,7 +123,7 @@ nav a {
 
 nav a:hover,
 nav [class*="fa-"]:hover {
-  color: var(--magenta);
+  color: var(--aqua);
 }
 .button {
   background-color: var(--magenta);
@@ -138,17 +138,17 @@ nav [class*="fa-"]:hover {
 }
 /* footer section */
 footer {
-    text-align: center;
+  text-align: center;
 }
 footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 2rem 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 3rem;
-    font-size: 3rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 3rem;
 }
 @media (min-width: 850px) {
   nav {
