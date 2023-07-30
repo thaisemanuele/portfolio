@@ -43,6 +43,11 @@ a:hover {
   color: var(--aqua);
   text-decoration: none;
 }
+
+img {
+  width: 100%;
+}
+
 /* intro styles */
 #intro {
   padding: 4rem 1rem 10rem 1rem;
@@ -90,7 +95,7 @@ a:hover {
 }
 
 .gradient-separator {
-  background: linear-gradient(90deg, var(--rose) 0%, var(--hotrose) 100%);
+  background: linear-gradient(90deg, var(--avocado) 0%, var(--hotrose) 90%);
 
   height: 2px;
 }
@@ -168,6 +173,8 @@ footer ul {
 /*projects section */
 #projects {
   padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #projects h2 {
@@ -211,6 +218,30 @@ footer ul {
   border-top: 1px solid var(--aqua);
   border-radius: 25px;
   padding: 1rem;
+}
+
+@media (min-width: 550px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+
+  .text {
+    order: 2;
+    text-align: right;
+    grid-column: 5/11;
+    grid-row: 1/2;
+  }
+
+  #projects img {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+
+  #projects ul {
+    justify-content: flex-end;
+  }
 }
 
 @media (min-width: 850px) {
