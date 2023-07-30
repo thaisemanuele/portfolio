@@ -257,4 +257,60 @@ footer ul {
   #contact {
     width: 700px;
   }
+
+  #intro {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    padding-bottom: 4rem;
+    position: relative;
+  }
+
+  #intro .name {
+    grid-column: 1/8;
+    margin-bottom: 0;
+  }
+
+  #intro h2 {
+    max-width: 750px;
+    grid-column: 1/11;
+    font-size: 3.5rem;
+  }
+
+  #intro p {
+    font-size: 1.1rem;
+  }
+
+  .intro-description {
+    background-color: var(--black);
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--hotrose), var(--rose));
+    padding: 1.5rem;
+    max-width: 500px;
+    grid-column: 8/13;
+  }
+
+  .intro-description::before {
+    content: "";
+    position: absolute;
+    top: 10rem;
+    bottom: 15rem;
+    width: 5px;
+    right: 6rem;
+    background-image: linear-gradient(var(--rose), var(--hotrose));
+    z-index: -1;
+  }
+
+  .intro-description::after {
+    content: "";
+    position: absolute;
+    top: 9.25rem;
+    right: 5.25rem;
+    width: 30px;
+    height: 30px;
+    background: var(--white);
+    border-radius: 30px;
+    border: 4px solid var(--rose);
+  }
 }
