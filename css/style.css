@@ -311,6 +311,7 @@ footer ul {
 
   .intro-description {
     background-color: var(--black);
+    box-shadow: 1px 3px 8px var(--aqua);
     border: 5px solid;
     border-image-slice: 1;
     --angle: 90deg;
