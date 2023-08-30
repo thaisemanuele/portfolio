@@ -1,17 +1,18 @@
 /* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 :root {
   --black: #011627;
-  --dkblue: #284b4e;
-  --dkrose: #9f6c5d;
+  --dkblue: #2a5c6a;
+  --dkrose: #613e51;
   --avocado: #81a649;
-  --hotrose: #c892e9;
-  --rose: #f78c6c;
-  --aqua: #7fdcca;
+  --hotrose: #9965cc;
+  --rose: #f396a1;
+  --aqua: #00ced1;
   --white: #f7f8fa;
   --font-size: 1.3rem;
   --mono: "Fira code", monospace;
   --sans: Oxygen, sans-serif;
 }
+
 /* border box model: https://css-tricks.com/box-sizing/ */
 html {
   box-sizing: border-box;
@@ -53,11 +54,17 @@ img {
   padding: 4rem 1rem 10rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  background: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 100%, 0.1) 50%,
+      transparent 0
+    )
+    top / 100% 5em;
 }
 
 #intro p {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 #intro .name {
@@ -95,7 +102,7 @@ img {
 }
 
 .gradient-separator {
-  background: linear-gradient(90deg, var(--avocado) 0%, var(--hotrose) 90%);
+  background: linear-gradient(90deg, var(--rose) 0%, var(--hotrose) 90%);
 
   height: 2px;
 }
@@ -260,44 +267,75 @@ footer ul {
 
   #intro {
     display: grid;
-    gap: 1rem;
+    gap: 0.1rem;
     grid-template-columns: repeat(12, 1fr);
-    padding-bottom: 4rem;
+    grid-template-rows: repeat(7, 3.5em);
+    padding: 3.5rem 1rem 1rem 1rem;
     position: relative;
   }
 
   #intro .name {
     grid-column: 1/8;
+    grid-row: 1/3;
     margin-bottom: 0;
+  }
+  #intro .name span {
+    font-size: 3.5rem;
   }
 
   #intro h2 {
     max-width: 750px;
     grid-column: 1/11;
-    font-size: 3.5rem;
+    grid-row: 3/6;
+    font-size: 3rem;
+    line-height: 1.1;
   }
 
   #intro p {
     font-size: 1.1rem;
   }
 
+  @keyframes roll {
+    from {
+      --angle: 30deg;
+    }
+    to {
+      --angle: 360deg;
+    }
+  }
+  @property --angle {
+    type: "<angle>";
+    inherit: true;
+    initial-value: 90deg;
+  }
+
   .intro-description {
     background-color: var(--black);
     border: 5px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(to left, var(--hotrose), var(--rose));
-    padding: 1.5rem;
-    max-width: 500px;
-    grid-column: 8/13;
+    --angle: 90deg;
+    border-image-source: linear-gradient(
+      var(--angle),
+      var(--hotrose),
+      var(--rose)
+    );
+    padding: 2rem;
+    max-width: 320px;
+    grid-column: 9/13;
+    grid-row: 3/7;
+  }
+
+  .intro-description:hover {
+    animation: roll 2s alternate infinite ease-in-out;
   }
 
   .intro-description::before {
     content: "";
     position: absolute;
-    top: 10rem;
-    bottom: 15rem;
+    top: 8rem;
+    bottom: 18rem;
     width: 5px;
-    right: 6rem;
+    right: 8rem;
     background-image: linear-gradient(var(--rose), var(--hotrose));
     z-index: -1;
   }
@@ -305,8 +343,8 @@ footer ul {
   .intro-description::after {
     content: "";
     position: absolute;
-    top: 9.25rem;
-    right: 5.25rem;
+    top: 7.25rem;
+    right: 7.25rem;
     width: 30px;
     height: 30px;
     background: var(--white);
